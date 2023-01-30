@@ -7,14 +7,31 @@
 	<title>operators</title>
 </head>
 <body>
+	<button onClick="myfunction()">leap year</button>
    <script>
+ 
    
+	
+	  function myfunction(){
+	    var x=2005;
+   var y=2023;
+   var z=[];
+   var z1=[];
+   for (x=2005; x<y; x++){
+   z.push(x)
+   if(x%4==0){
+	z1.push(x)
+   }
+   }
+   console.log(z)
+   console.log(z1)
+   }
     // 1.pop 
-	 var color=["green", "yellow", "red", "pink","whiet"]
-	  var colors=color.length;
-	  console.log(colors);
-	  var x=color.pop()
-	  console.log(x);
+	 <!-- var color=["green", "yellow", "red", "pink","whiet"] -->
+	  <!-- var colors=color.length; -->
+	  <!-- console.log(colors); -->
+	  <!-- var x=color.pop() -->
+	  <!-- console.log(x); -->
 	 
 	  
 	    // 2.push
@@ -80,47 +97,68 @@
 		  console.log(b);
    
 	  
-	  var a= [1,3,4,5];
-	  var b=a.reduce (function(previous,current){
-	  var add=(previous+current);
-	  return add;
-	  })
-	  console.log(b);
 	  
-	  var a =[4,5,6,7];
-	  var b=a.unshift(1,2,3);
-	  var c=a.splice(5,2);
-	  console .log(a)
-	  
-	  <!-- Input [4,5,6,8,3] -->
-<!-- Output [4,6,8] -->
-	  
-	  var a=[4,5,6,8,3];
-	  var b=a.pop()
-	  var c=a.splice(1,1)
-	  console.log(a);
-	 
-	 var a =[4,5,6,8,3];
-	 var b=[]
-	 for (i=0; i<a.length; i++){
-		if(a[i]%2==0){
-			console.log(a[i])
-		}
 
-	 }
-	 
-	 var a =[4,5,6,8,3];
-	 var b=[]
-	 for (i=0; i<a.length; i++){
-		if(a[i]%2==0){
-			console.log(a[i])
-		}
-	 }
 	
-	var value=b.reduce((current,previous)=>current+previous
-	)
-	console.log(value)
+		// 1.concat
+	   var a=[ "apple", "mango","orange"];
+	   var b=["gova", "papaya"];
+	   var c=a.concat(b);
+	   console.log(c);
+	   
+	 //2.every
+	 
+	 var age=[11,3,45,23,56,9,15];
+	 var b=a.every(function (num){
+		return num <2
+	 })
+	console.log(b)
+	
+	//3.fill
+	var a=[1,2,3,4,5,6,7];
+	var b=a.fill(5,2,6);
+	console.log(b)
+	
+	//4.indexOf
+	  var fruits=["banana","apple","orange","pineapple","gova"];
+      var fruit=fruits.indexOf("orange");
+	  console.log(fruit);
+	
+	//5.map
+	 var color=["green", "yellow", "red", "pink","whiet"];
+	   var col=color.map(function(a){
+	     return a.toUpperCase();
+	  });
+	     console.log(col);
+	  
+	//6.reversed
+	var color=["green", "yellow", "red", "pink","whiet"];
+	  var colors=color.reverse();
+	  console.log(colors);
+	  
+	  //7.some
+	  var a=[1,2,3,4,5,6,7]
+	  var b=(value)=>value%3===0;
+	  console.log(a.some(b))
+	
+	//8.slice
+	  var x=[5,6,7,8,9,1,4,3];
+	  var y=x.slice(0,3);
+		 console.log(y);
+		 console.log(x);
 		 
+	//9.tostring
+	var a=["yellow"];
+	var b=a.toString();
+	var c=5
+	var d=c.toString();
+	console.log(b,typeof(b))
+	console.log(d,typeof(d))
+	
+	
+	
+	
+	   
    </script>
 </body>
 </html>
